@@ -7,4 +7,4 @@ pluginManagement {
 }
 rootProject.name = "MessagingServicesBenchmark"
 
-include("Kafka")
+include("Kafka:KafkaClient")

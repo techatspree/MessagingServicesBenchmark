@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka/src/main/kotlin/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaMeasurement/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +32,9 @@
         <task path="$PROJECT_DIR$/Kafka">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/Kafka/KafkaClient">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -58,12 +50,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
                 <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
               <path>
@@ -75,14 +61,22 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
                 <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
+                <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
                 <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
+                <item name="docker" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -118,11 +112,17 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.MessagingServicesBenchmark:Kafka [run]">
-    <configuration name="MessagingServicesBenchmark [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Kafka/KafkaMeasurement" />
+      <recent name="$PROJECT_DIR$/Kafka/KafkaClient" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]">
+    <configuration name="MessagingServicesBenchmark:Kafka [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Kafka" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -131,6 +131,27 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MessagingServicesBenchmark:Kafka [docker]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Kafka" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="docker" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,18 +182,55 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <module name="MessagingServicesBenchmark.Kafka.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="MessagingServicesBenchmark:Kafka:KafkaClient [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Kafka/KafkaClient" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MessagingServicesBenchmark:Kafka:KafkaClient [docker]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Kafka/KafkaClient" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="docker" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]" />
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [build]" />
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka [docker]" />
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka [build]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka [run]" />
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Gradle.MessagingServicesBenchmark [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -185,11 +243,23 @@
       <option name="presentableId" value="Default" />
       <updated>1689932315594</updated>
       <workItem from="1689932317211" duration="2754000" />
-      <workItem from="1689935091991" duration="1772000" />
+      <workItem from="1689935091991" duration="6752000" />
     </task>
+    <task id="LOCAL-00001" summary="a default Kafka Docker configuration and a Kotlin main file">
+      <created>1689953008068</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689953008068</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a default Kafka Docker configuration and a Kotlin main file" />
+    <option name="LAST_COMMIT_MESSAGE" value="a default Kafka Docker configuration and a Kotlin main file" />
   </component>
 </project>
