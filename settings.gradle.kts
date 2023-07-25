@@ -8,3 +8,4 @@ pluginManagement {
 rootProject.name = "MessagingServicesBenchmark"
 
 include("Kafka:KafkaClient")
+include("Kafka:KafkaMeasurement")
