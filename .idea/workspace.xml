@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Kafka/KafkaMeasurement/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka/KafkaMeasurement/src/main/docker/docker-compose.yml.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="created a topic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka/KafkaMeasurement/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaMeasurement/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/KafkaClient/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/KafkaMeasurement/docker-compose.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +51,35 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
                 <item name="Kafka" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
+                <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
+                <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
+                <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
+                <item name="Kafka" type="2d1252cf:ModuleNode" />
+                <item name="KafkaClient" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="docker" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -119,7 +146,7 @@
       <recent name="$PROJECT_DIR$/Kafka/KafkaClient" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeDown]">
+  <component name="RunManager" selected="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]">
     <configuration name="MessagingServicesBenchmark:Kafka:KafkaClient [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -231,10 +258,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeDown]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeUp]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [generateDockerCompose]" />
-        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [build]" />
       </list>
     </recent_temporary>
@@ -248,7 +275,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689932315594</updated>
       <workItem from="1689932317211" duration="2754000" />
-      <workItem from="1689935091991" duration="10448000" />
+      <workItem from="1689935091991" duration="12592000" />
     </task>
     <task id="LOCAL-00001" summary="a default Kafka Docker configuration and a Kotlin main file">
       <created>1689953008068</created>
@@ -271,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690278656988</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="both container starts with docker compose">
+      <created>1690281357813</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690281357813</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,6 +318,8 @@
     <MESSAGE value="a default Kafka Docker configuration and a Kotlin main file" />
     <MESSAGE value="modularized build&#10;create docker container" />
     <MESSAGE value="Java code in the docker container runs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Java code in the docker container runs" />
+    <MESSAGE value="both container starts with docker compose" />
+    <MESSAGE value="created a topic" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a topic" />
   </component>
 </project>

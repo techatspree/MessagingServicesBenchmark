@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+    implementation("org.apache.kafka:kafka-clients:3.5.0")
 }
 
 tasks.test {
