@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaMeasurement/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/KafkaClient/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/docker/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +239,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689932315594</updated>
       <workItem from="1689932317211" duration="2754000" />
-      <workItem from="1689935091991" duration="6752000" />
+      <workItem from="1689935091991" duration="7918000" />
     </task>
     <task id="LOCAL-00001" summary="a default Kafka Docker configuration and a Kotlin main file">
       <created>1689953008068</created>
@@ -252,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689953008068</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modularized build&#10;create docker container">
+      <created>1690045491040</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1690045491040</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +263,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a default Kafka Docker configuration and a Kotlin main file" />
-    <option name="LAST_COMMIT_MESSAGE" value="a default Kafka Docker configuration and a Kotlin main file" />
+    <MESSAGE value="modularized build&#10;create docker container" />
+    <option name="LAST_COMMIT_MESSAGE" value="modularized build&#10;create docker container" />
   </component>
 </project>

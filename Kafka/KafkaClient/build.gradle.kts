@@ -28,7 +28,7 @@ application {
 }
 
 docker {
-    name="akquinet:kafkaclient"
+    name="akquinet/kafkaclient:latest"
     files(tasks.distTar.get())
     setDockerfile(project.file("src/main/docker/Dockerfile"))
 }
