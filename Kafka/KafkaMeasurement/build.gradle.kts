@@ -1,16 +1,13 @@
 plugins {
-    id("com.palantir.docker-compose") version "0.35.0"
+    alias(libs.plugins.palantir.docker)
+    id("com.palantir.docker-compose") // do nbot specify the version, there seems to be a classpath problem with the docker main plugin
 }
 
 group = "de.akquinet.playground"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
-
 dependencies {
-    docker(project(":Kafka:KafkaClient"))
+   docker(project(":Kafka:KafkaClient"))
 }
 
 dockerCompose {

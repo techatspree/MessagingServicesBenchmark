@@ -1,0 +1,8 @@
+[versions]
+palantirDockerPluginVersion = "0.35.0"
+
+[libraries]
+
+[plugins]
+palantir-docker = { id = "com.palantir.docker", version.ref = "palantirDockerPluginVersion" }
+palantir-dockercompose = { id = "com.palantir.docker-compose", version.ref = "palantirDockerPluginVersion" }

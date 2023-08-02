@@ -1,15 +1,11 @@
 plugins {
-    kotlin("jvm") version "1.9.0"
-    id("com.palantir.docker") version "0.35.0"
+    kotlin("jvm")
+    alias(libs.plugins.palantir.docker)
     application
 }
 
 group = "de.akquinet.playground"
 version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     testImplementation(kotlin("test"))
