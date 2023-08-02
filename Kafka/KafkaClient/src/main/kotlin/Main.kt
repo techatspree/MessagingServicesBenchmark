@@ -29,6 +29,7 @@ fun main(args: Array<String>) {
         with(Admin.create(kafkaConfiguration)) {
             createTopics(listOf(newTopic)).all().get()
         }
+        println("... topic created.")
     } catch (e: ExecutionException) {
         if (e.cause !is TopicExistsException) throw e
     }

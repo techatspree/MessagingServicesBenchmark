@@ -5,6 +5,10 @@ Start the Kafka server
 
     docker-compose up
 
+# Prerequisites
+
+* JDK Version 18
+
 
 # Technical Architecture
 
@@ -15,4 +19,5 @@ Start the Kafka server
 * Apache Kafka Raft (KRaft)
   * We use KRaft instead of Zookeeper, because it is the more modern approach and by default enabled in the Docker container.
 * Docker-Compose
-  * A Kubernetes cluster on a local Minicube would be more realistic. But, because we wanted to measure the messaging services and had more knowledge with Docker-Compose we chose the later.   
+  * A Kubernetes cluster on a local Minicube would be more realistic. But, because we wanted to measure the messaging services and had more knowledge with Docker-Compose we chose the later.
+

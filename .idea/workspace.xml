@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="">
+    <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="created a topic">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaClient/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/KafkaMeasurement/src/main/docker/docker-compose.yml.template" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/KafkaMeasurement/src/main/docker/docker-compose.yml.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,11 +46,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="MessagingServicesBenchmark" type="f1a62948:ProjectNode" />
                 <item name="Kafka" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -69,7 +67,7 @@
                 <item name="Kafka" type="2d1252cf:ModuleNode" />
                 <item name="KafkaClient" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="distribution" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -131,7 +129,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -144,7 +145,7 @@
       <recent name="$PROJECT_DIR$/Kafka/KafkaClient" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeDown]">
+  <component name="RunManager" selected="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeUp]">
     <configuration name="MessagingServicesBenchmark:Kafka:KafkaClient [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -250,16 +251,31 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="MesssagingServicesBenchmark" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="MesssagingServicesBenchmark" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeDown]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeUp]" />
-        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [generateDockerCompose]" />
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaMeasurement [dockerComposeDown]" />
+        <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [docker]" />
         <item itemvalue="Gradle.MessagingServicesBenchmark:Kafka:KafkaClient [build]" />
       </list>
     </recent_temporary>
@@ -274,6 +290,8 @@
       <updated>1689932315594</updated>
       <workItem from="1689932317211" duration="2754000" />
       <workItem from="1689935091991" duration="13850000" />
+      <workItem from="1690959014228" duration="266000" />
+      <workItem from="1690959315718" duration="1044000" />
     </task>
     <task id="LOCAL-00001" summary="a default Kafka Docker configuration and a Kotlin main file">
       <created>1689953008068</created>
@@ -319,6 +337,17 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.template" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="a default Kafka Docker configuration and a Kotlin main file" />
     <MESSAGE value="modularized build&#10;create docker container" />
@@ -326,5 +355,9 @@
     <MESSAGE value="both container starts with docker compose" />
     <MESSAGE value="created a topic" />
     <option name="LAST_COMMIT_MESSAGE" value="created a topic" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
