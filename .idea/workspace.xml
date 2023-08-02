@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42095f55-4919-4cd2-91de-807d9f5d464b" name="Changes" comment="fixed Kafka version in Docker and used default coonfiguration">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,9 +126,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
@@ -287,7 +288,7 @@
       <workItem from="1689932317211" duration="2754000" />
       <workItem from="1689935091991" duration="13850000" />
       <workItem from="1690959014228" duration="266000" />
-      <workItem from="1690959315718" duration="1599000" />
+      <workItem from="1690959315718" duration="2735000" />
     </task>
     <task id="LOCAL-00001" summary="a default Kafka Docker configuration and a Kotlin main file">
       <created>1689953008068</created>
@@ -331,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690960610643</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fixed Kafka version in Docker and used default coonfiguration">
+      <created>1690960932064</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1690960932064</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
