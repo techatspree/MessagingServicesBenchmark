@@ -14,7 +14,7 @@ class Benchmark(val messagingService: MessagingService) {
                 })
             }
 
-        return BenchmarkResult(nrOfMeasurements, nrOfSentMessages, executionTimes.computeQuartiles())
+        return BenchmarkResult(nrOfMeasurements, nrOfSentMessages, executionTimes.computeExcludedQuartiles())
     }
 
     private fun doMeasurement(nrOfSentMessages: Long) {
