@@ -1,7 +1,9 @@
 [versions]
 palantirDockerPluginVersion = "0.35.0"
+kotlinxCoroutines = "1.7.3"
 
 [libraries]
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name="kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
 
 [plugins]
 palantir-docker = { id = "com.palantir.docker", version.ref = "palantirDockerPluginVersion" }
