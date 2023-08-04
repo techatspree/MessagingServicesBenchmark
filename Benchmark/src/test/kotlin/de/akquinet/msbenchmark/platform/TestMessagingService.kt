@@ -1,18 +1,27 @@
 package de.akquinet.msbenchmark.platform
 
+import kotlinx.coroutines.*
+import kotlinx.coroutines.channels.Channel
 
-class TestMessagingService : MessagingService {
-    private val messageQueue = ArrayDeque<String>()
+
+class TestMessagingService(val testThreadContext: CloseableCoroutineDispatcher) : MessagingService {
+
+    private val channel = Channel<String>()
     private var receivedMessages = 0L
+    private val coroutineScope = CoroutineScope(testThreadContext)
+
     override fun sendMessage(s: String) {
-        messageQueue.addLast(s)
+        coroutineScope.launch {
+            channel.send(s)
+        }
     }
 
     override fun waitForNumberOfReceivedMessages(nrOfSentMessages: Long) {
-        while ( receivedMessages <= nrOfSentMessages ) {
-
+        coroutineScope.launch {
+            while ( receivedMessages <= nrOfSentMessages ) {
+                channel.receive()
+                receivedMessages++
+            }
         }
-        TODO("Not yet implemented")
     }
-
 }

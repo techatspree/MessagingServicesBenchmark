@@ -10,23 +10,23 @@ import kotlin.test.AfterTest
 
 @OptIn(ExperimentalCoroutinesApi::class)
 internal class BenchmarkTest {
-    private val mainThreadSurrogate = newSingleThreadContext("Test Thread")
+    private val testThreadContext = newSingleThreadContext("Test Thread")
 
     @BeforeTest
     fun setUp() {
-        Dispatchers.setMain(mainThreadSurrogate)
+        Dispatchers.setMain(testThreadContext)
     }
 
     @AfterTest
     fun tearDown() {
         Dispatchers.resetMain() // reset the main dispatcher to the original Main dispatcher
-        mainThreadSurrogate.close()
+        testThreadContext.close()
     }
 
     @Test
     fun testBenchmark() {
         runBlocking {
-            val testMessagingService = TestMessagingService()
+            val testMessagingService = TestMessagingService(testThreadContext)
             val benchmark = Benchmark(testMessagingService)
             val results = benchmark.runBenchmark()
             assertNotNull(results)
