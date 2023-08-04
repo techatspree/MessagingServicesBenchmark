@@ -28,7 +28,7 @@ internal class QuartilesKtTest {
 
     @Test
     fun testWikipediaExample1() {
-        val quartiles = listOf<Int>( 6, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49).computeExcludedQuartiles()
+        val quartiles = listOf( 6, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49).computeExcludedQuartiles()
 
         assertSame(6.0, quartiles.min)
         assertSame(15.0, quartiles.first)
@@ -39,7 +39,7 @@ internal class QuartilesKtTest {
 
     @Test
     fun testWikipediaExample2() {
-        val quartiles = listOf<Int>( 7, 15, 36, 39, 40, 41).computeExcludedQuartiles()
+        val quartiles = listOf( 7, 15, 36, 39, 40, 41).computeExcludedQuartiles()
 
         assertSame(7.0, quartiles.min)
         assertSame(15.0, quartiles.first)
