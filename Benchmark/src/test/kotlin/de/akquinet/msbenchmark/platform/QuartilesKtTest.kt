@@ -6,47 +6,47 @@ import kotlin.test.Test
 internal class QuartilesKtTest {
     @Test
     fun testListOf1To4() {
-        val quartiles = (1..4 ).toList().computeExcludedQuartiles()
+        val quartiles = (1L..4L ).toList().computeExcludedQuartiles()
 
-        assertSame(1.0, quartiles.min)
-        assertSame(1.5, quartiles.first)
-        assertSame(2.5, quartiles.median)
-        assertSame(3.5, quartiles.third)
-        assertSame(4.0, quartiles.max)
+        assertEquals(1.0, quartiles.min)
+        assertEquals(1.5, quartiles.first)
+        assertEquals(2.5, quartiles.median)
+        assertEquals(3.5, quartiles.third)
+        assertEquals(4.0, quartiles.max)
     }
 
     @Test
     fun testListOf1To5() {
-        val quartiles = (1..5 ).toList().computeExcludedQuartiles()
+        val quartiles = (1L..5L ).toList().computeExcludedQuartiles()
 
-        assertSame(1.0, quartiles.min)
-        assertSame(1.5, quartiles.first)
-        assertSame(3.0, quartiles.median)
-        assertSame(4.5, quartiles.third)
-        assertSame(5.0, quartiles.max)
+        assertEquals(1.0, quartiles.min)
+        assertEquals(1.5, quartiles.first)
+        assertEquals(3.0, quartiles.median)
+        assertEquals(4.5, quartiles.third)
+        assertEquals(5.0, quartiles.max)
     }
 
     @Test
     fun testWikipediaExample1() {
         // from https://en.wikipedia.org/wiki/Quartile
-        val quartiles = listOf( 6, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49).computeExcludedQuartiles()
+        val quartiles = listOf( 6L, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49).computeExcludedQuartiles()
 
-        assertSame(6.0, quartiles.min)
-        assertSame(15.0, quartiles.first)
-        assertSame(40.0, quartiles.median)
-        assertSame(43.0, quartiles.third)
-        assertSame(49.0, quartiles.max)
+        assertEquals(6.0, quartiles.min)
+        assertEquals(15.0, quartiles.first)
+        assertEquals(40.0, quartiles.median)
+        assertEquals(43.0, quartiles.third)
+        assertEquals(49.0, quartiles.max)
     }
 
     @Test
     fun testWikipediaExample2() {
         // from https://en.wikipedia.org/wiki/Quartile
-        val quartiles = listOf( 7, 15, 36, 39, 40, 41).computeExcludedQuartiles()
+        val quartiles = listOf( 7L, 15, 36, 39, 40, 41).computeExcludedQuartiles()
 
-        assertSame(7.0, quartiles.min)
-        assertSame(15.0, quartiles.first)
-        assertSame(37.5, quartiles.median)
-        assertSame(40.0, quartiles.third)
-        assertSame(44.0, quartiles.max)
+        assertEquals(7.0, quartiles.min)
+        assertEquals(15.0, quartiles.first)
+        assertEquals(37.5, quartiles.median)
+        assertEquals(40.0, quartiles.third)
+        assertEquals(44.0, quartiles.max)
     }
 }
