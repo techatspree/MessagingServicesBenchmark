@@ -14,12 +14,12 @@ fun List<Long>.computeExcludedQuartiles(): Quartiles {
 
     val oddNumberOfElements = sortedList.size.rem(2) == 1
 
-    val first = medianInRange(sortedList,0, sortedList.size.div(2))
+    val first = medianInRange(sortedList,0, sortedList.size.div(2)-1)
 
     val third = if (oddNumberOfElements)
-        medianInRange(sortedList, sortedList.size.div(2)+2, sortedList.size-1)
-    else
         medianInRange(sortedList, sortedList.size.div(2)+1, sortedList.size-1)
+    else
+        medianInRange(sortedList, sortedList.size.div(2), sortedList.size-1)
 
     return Quartiles(min, first, median, third, max)
 }
@@ -32,9 +32,9 @@ private fun  medianInRange(sortedList: List<Long>, indexA: Int, indexB: Int) : D
 
     val median =
         if (oddNumberOfElements)
-            sortedList[middleIndex + 1].toDouble()
+            sortedList[middleIndex].toDouble()
         else
-            (sortedList[middleIndex] + sortedList[middleIndex+1]) / 2.0
+            (sortedList[middleIndex] + sortedList[middleIndex-1]) / 2.0
 
     return median
 }
