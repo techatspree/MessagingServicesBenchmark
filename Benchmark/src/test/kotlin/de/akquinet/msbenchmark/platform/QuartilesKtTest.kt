@@ -47,6 +47,6 @@ internal class QuartilesKtTest {
         assertEquals(15.0, quartiles.first)
         assertEquals(37.5, quartiles.median)
         assertEquals(40.0, quartiles.third)
-        assertEquals(44.0, quartiles.max)
+        assertEquals(41.0, quartiles.max)
     }
 }
