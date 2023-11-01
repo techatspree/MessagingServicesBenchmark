@@ -8,6 +8,7 @@ group = "de.akquinet.playground"
 version = "1.0-SNAPSHOT"
 
 dependencies {
+    implementation(project(":Benchmark"))
     testImplementation(kotlin("test"))
     implementation("org.apache.kafka:kafka-clients:3.5.0")
 }

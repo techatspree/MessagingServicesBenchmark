@@ -1,6 +1,6 @@
 package de.akquinet.msbenchmark.platform
 
-class Quartiles(val min: Double, val first: Double, val median: Double, val third: Double, val max: Double)
+data class Quartiles(val min: Double, val first: Double, val median: Double, val third: Double, val max: Double)
 
 /**
  * uses https://en.wikipedia.org/wiki/Quartile

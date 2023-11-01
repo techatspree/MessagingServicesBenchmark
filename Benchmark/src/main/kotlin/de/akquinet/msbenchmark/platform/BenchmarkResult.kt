@@ -1,3 +1,3 @@
 package de.akquinet.msbenchmark.platform
 
-class BenchmarkResult(nrOfMeasurements:Long,nrOfMessages:Long, quartiles:Quartiles)
+data class BenchmarkResult(val nrOfMeasurements:Long, val nrOfMessages:Long, val quartiles:Quartiles)
