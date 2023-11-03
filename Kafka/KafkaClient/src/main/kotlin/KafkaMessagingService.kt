@@ -16,15 +16,15 @@ import java.util.*
 import java.util.concurrent.ExecutionException
 
 
-
 class KafkaMessagingService : MessagingService {
     companion object {
         private const val NO_REPLICATION: Short = 1
         private const val NR_OF_PARTITIONS = 1
         private const val TOPIC_NAME = "MeasurementBenchmarkTopic"
         private const val MESSAGE_KEY = "MeasurementKey"
-        private val kafkaConfiguration : Properties = createKafkaConfiguration()
-        private val consumer : KafkaConsumer<String,String>
+        private val pollDuration = Duration.ofMillis(100)
+        private val kafkaConfiguration: Properties = createKafkaConfiguration()
+        private val consumer: KafkaConsumer<String, String>
 
         init {
             println("Create topic...")
@@ -43,7 +43,14 @@ class KafkaMessagingService : MessagingService {
                 subscribe(listOf(TOPIC_NAME))
             }
             println("Registered consumer: $consumer")
+
+            println("Register shutdown hook to free consumer")
+            Runtime.getRuntime().addShutdownHook(Thread {
+                // abort any consumer blocked in polling
+                consumer.wakeup()
+            })
         }
+
         private fun createKafkaConfiguration(): Properties {
             val properties = Properties()
             // basic properties
@@ -61,40 +68,38 @@ class KafkaMessagingService : MessagingService {
 
     }
 
-    override fun sendMessage(messageValue: String) {
+    override fun sendMessage(message: String) {
         KafkaProducer<String, String>(kafkaConfiguration).use { producer ->
             producer.send(
                 ProducerRecord(
                     TOPIC_NAME,
                     MESSAGE_KEY,
-                    messageValue
+                    message
                 )
             ) { recordMetadata: RecordMetadata, ex: Exception? ->
-                when (ex) {
-                    null ->
-                        println("Produced message with offset ${recordMetadata.offset()}")
-
-                    else ->
-                        ex.printStackTrace()
+                if (ex != null) {
+                    // TODO: logging...
+                    System.err.println("Error while producing message with offset ${recordMetadata.offset()}: $ex")
+                    ex.printStackTrace()
                 }
             }
         }
     }
 
     override fun waitForNumberOfReceivedMessages(nrOfSentMessages: Long) {
-        val pollDuration = Duration.ofMillis(100)
-        consumer.use {
-            var totalCount = 0L
-            while (totalCount<nrOfSentMessages) {
-                // not the best method, but should work...
-                totalCount = consumer
-                    .poll(pollDuration)
-                    .fold(totalCount, { nrOfReceivedMessages, message ->
-                        println("Consumed record with key ${message.key()} and value ${message.value()}, while having $nrOfReceivedMessages received")
-                        nrOfReceivedMessages + 1
-                    })
-                println("finished polling with totalCount=$totalCount")
+        var totalCount = 0L
+        while (totalCount < nrOfSentMessages) {
+            println("polling for messages")
+            val records = consumer.poll(pollDuration)
+            val recordsIterator = records.iterator()
+            while (recordsIterator.hasNext() &&
+                totalCount < nrOfSentMessages
+            ) {
+                recordsIterator.next()
+                totalCount++
             }
+            println("received now $totalCount of $nrOfSentMessages messages")
         }
+        println("received all $nrOfSentMessages messages")
     }
 }
